@@ -9,8 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/crewjam/saml"
-	"github.com/dgrijalva/jwt-go"
+	"github.com/okoeth/saml"
 )
 
 // Middleware implements middleware than allows a web application
@@ -243,7 +242,7 @@ func (m *Middleware) Authorize(w http.ResponseWriter, r *http.Request, assertion
 
 		// delete the cookie
 		stateCookie.Value = ""
-		stateCookie.Expires = time.Unix(1,0) // past time as close to epoch as possible, but not zero time.Time{}
+		stateCookie.Expires = time.Unix(1, 0) // past time as close to epoch as possible, but not zero time.Time{}
 		http.SetCookie(w, stateCookie)
 	}
 
