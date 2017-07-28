@@ -25,11 +25,11 @@ import (
 // NameIDFormat is the format of the id
 type NameIDFormat string
 
-func (n NameIDFormat) Element() *etree.Element {
-	el := etree.NewElement("")
-	el.SetText(string(n))
-	return el
-}
+//func (n NameIDFormat) Element() *etree.Element {
+//	el := etree.NewElement("")
+//	el.SetText(string(n))
+//	return el
+//}
 
 // Name ID formats
 const (
